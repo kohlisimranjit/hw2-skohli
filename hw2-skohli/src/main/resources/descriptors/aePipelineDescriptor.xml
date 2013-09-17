@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  
+  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="AnswerScorer">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/AnswerScorer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramAnnotator">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TestElementAnnotator">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/TestElementAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenAnnotator">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/TokenAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="NGramAnnotator2">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramAnnotator3">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Evaluator">
+      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/Evaluator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <flowController key="flowControllerDescriptor">
+    <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/flowControllerDescriptor.xml"/>
+  </flowController>
+  <!--
+  <delegateAnalysisEngineSpecifiers>
+<delegateAnalysisEngine key="RoomNumber">
+<import location="../ex2/RoomNumberAnnotator.xml"/>
+</delegateAnalysisEngine>
+<delegateAnalysisEngine key="DateTime">
+<import location="TutorialDateTime.xml" />
+</delegateAnalysisEngine>
+</delegateAnalysisEngineSpecifiers>
+  -->
+  
+  
+  
+  
+  
+    <analysisEngineMetaData>
+    <name>aeDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>TestElementAnnotator</node>
+        <node>TokenAnnotator</node>
+        <node>NGramAnnotator</node>
+        <node>NGramAnnotator2</node>
+        <node>NGramAnnotator3</node>
+        <node>AnswerScorer</node>
+        <node>Evaluator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
