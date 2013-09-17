@@ -6,29 +6,29 @@
   
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="AnswerScorer">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/AnswerScorer.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/AnswerScorer.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="NGramAnnotator">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/NGramAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TestElementAnnotator">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/TestElementAnnotator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TestElementAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TokenAnnotator">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/TokenAnnotator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TokenAnnotator.xml"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="NGramAnnotator2">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/NGramAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="NGramAnnotator3">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/NGramAnnotator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/NGramAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="Evaluator">
-      <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/Evaluator.xml"/>
+      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/Evaluator.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <flowController key="flowControllerDescriptor">
-    <import location="/home/richie/git/hw0-skohli/hw1-skohli/src/main/resources/flowControllerDescriptor.xml"/>
+    <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/flowControllerDescriptor.xml"/>
   </flowController>
   <!--
   <delegateAnalysisEngineSpecifiers>
