@@ -7,11 +7,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Fri Sep 20 02:49:03 EDT 2013
+ * Updated by JCasGen Fri Sep 20 12:26:16 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class TokenizedDocument extends Annotation {
@@ -76,6 +77,40 @@ public class TokenizedDocument extends Annotation {
     if (TokenizedDocument_Type.featOkTst && ((TokenizedDocument_Type)jcasType).casFeat_tokenizedQuestion == null)
       jcasType.jcas.throwFeatMissing("tokenizedQuestion", "edu.cmu.deiis.subTypes.TokenizedDocument");
     jcasType.ll_cas.ll_setRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedQuestion, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
+  //*--------------*
+  //* Feature: tokenizedAnswers
+
+  /** getter for tokenizedAnswers - gets 
+   * @generated */
+  public FSArray getTokenizedAnswers() {
+    if (TokenizedDocument_Type.featOkTst && ((TokenizedDocument_Type)jcasType).casFeat_tokenizedAnswers == null)
+      jcasType.jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers)));}
+    
+  /** setter for tokenizedAnswers - sets  
+   * @generated */
+  public void setTokenizedAnswers(FSArray v) {
+    if (TokenizedDocument_Type.featOkTst && ((TokenizedDocument_Type)jcasType).casFeat_tokenizedAnswers == null)
+      jcasType.jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    jcasType.ll_cas.ll_setRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for tokenizedAnswers - gets an indexed value - 
+   * @generated */
+  public TokenizedSentence getTokenizedAnswers(int i) {
+    if (TokenizedDocument_Type.featOkTst && ((TokenizedDocument_Type)jcasType).casFeat_tokenizedAnswers == null)
+      jcasType.jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers), i);
+    return (TokenizedSentence)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers), i)));}
+
+  /** indexed setter for tokenizedAnswers - sets an indexed value - 
+   * @generated */
+  public void setTokenizedAnswers(int i, TokenizedSentence v) { 
+    if (TokenizedDocument_Type.featOkTst && ((TokenizedDocument_Type)jcasType).casFeat_tokenizedAnswers == null)
+      jcasType.jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((TokenizedDocument_Type)jcasType).casFeatCode_tokenizedAnswers), i, jcasType.ll_cas.ll_getFSRef(v));}
   }
 
     

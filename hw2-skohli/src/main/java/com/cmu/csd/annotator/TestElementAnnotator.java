@@ -22,9 +22,9 @@ public class TestElementAnnotator extends   JCasAnnotator_ImplBase{
 		Document document=new Document(jCas);
 		//jCas.a
 		//annotatedQuestion
-		AnnotatedQuestion annotatedQuestion=new AnnotatedQuestion(jCas);
+		//AnnotatedQuestion annotatedQuestion=new AnnotatedQuestion(jCas);
 		//annotatedQuestion.setBegin(v);
-		annotatedQuestion.setText(question);
+		//annotatedQuestion.setText(question);
 		FSArray answers = new FSArray(jCas,lines.length-1);
 		AnnotatedQuestion aq=new AnnotatedQuestion(jCas);
 		aq.setText(question);

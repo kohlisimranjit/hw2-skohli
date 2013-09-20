@@ -11,7 +11,7 @@ import edu.cmu.deiis.types.NGram;
 
 
 /** 
- * Updated by JCasGen Fri Sep 20 02:49:03 EDT 2013
+ * Updated by JCasGen Fri Sep 20 12:26:16 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class AnnotatedNGram extends NGram {

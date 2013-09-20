@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Fri Sep 20 02:49:03 EDT 2013
+ * Updated by JCasGen Fri Sep 20 12:26:16 EDT 2013
  * @generated */
 public class TokenizedDocument_Type extends Annotation_Type {
   /** @generated */
@@ -63,6 +63,43 @@ public class TokenizedDocument_Type extends Annotation_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_tokenizedQuestion, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_tokenizedAnswers;
+  /** @generated */
+  final int     casFeatCode_tokenizedAnswers;
+  /** @generated */ 
+  public int getTokenizedAnswers(int addr) {
+        if (featOkTst && casFeat_tokenizedAnswers == null)
+      jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers);
+  }
+  /** @generated */    
+  public void setTokenizedAnswers(int addr, int v) {
+        if (featOkTst && casFeat_tokenizedAnswers == null)
+      jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    ll_cas.ll_setRefValue(addr, casFeatCode_tokenizedAnswers, v);}
+    
+   /** @generated */
+  public int getTokenizedAnswers(int addr, int i) {
+        if (featOkTst && casFeat_tokenizedAnswers == null)
+      jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    if (lowLevelTypeChecks)
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i);
+  }
+   
+  /** @generated */ 
+  public void setTokenizedAnswers(int addr, int i, int v) {
+        if (featOkTst && casFeat_tokenizedAnswers == null)
+      jcas.throwFeatMissing("tokenizedAnswers", "edu.cmu.deiis.subTypes.TokenizedDocument");
+    if (lowLevelTypeChecks)
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i, v, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_tokenizedAnswers), i, v);
+  }
+ 
 
 
 
@@ -75,6 +112,10 @@ public class TokenizedDocument_Type extends Annotation_Type {
  
     casFeat_tokenizedQuestion = jcas.getRequiredFeatureDE(casType, "tokenizedQuestion", "edu.cmu.deiis.subTypes.TokenizedSentence", featOkTst);
     casFeatCode_tokenizedQuestion  = (null == casFeat_tokenizedQuestion) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tokenizedQuestion).getCode();
+
+ 
+    casFeat_tokenizedAnswers = jcas.getRequiredFeatureDE(casType, "tokenizedAnswers", "uima.cas.FSArray", featOkTst);
+    casFeatCode_tokenizedAnswers  = (null == casFeat_tokenizedAnswers) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tokenizedAnswers).getCode();
 
   }
 }
