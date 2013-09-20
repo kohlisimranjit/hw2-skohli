@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Sep 16 20:19:28 EDT 2013
- * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Fri Sep 20 02:52:16 EDT 2013
+ * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
   /** @generated

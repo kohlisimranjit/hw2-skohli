@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Wed Sep 11 13:44:28 EDT 2013 */
+/* First created by JCasGen Wed Sep 18 13:56:37 EDT 2013 */
 package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
@@ -10,15 +10,15 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Fri Sep 20 02:52:16 EDT 2013
+ * Updated by JCasGen Wed Sep 18 13:56:37 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
-public class Question extends Annotation {
+public class ScoredAnswer extends AnswerScore {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Question.class);
+  public final static int typeIndexID = JCasRegistry.register(ScoredAnswer.class);
   /** @generated
    * @ordered 
    */
@@ -30,23 +30,23 @@ public class Question extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Question() {/* intentionally empty block */}
+  protected ScoredAnswer() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Question(int addr, TOP_Type type) {
+  public ScoredAnswer(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Question(JCas jcas) {
+  public ScoredAnswer(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Question(JCas jcas, int begin, int end) {
+  public ScoredAnswer(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

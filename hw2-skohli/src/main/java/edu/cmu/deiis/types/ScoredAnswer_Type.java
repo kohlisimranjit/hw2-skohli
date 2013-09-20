@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Wed Sep 11 13:44:28 EDT 2013 */
+/* First created by JCasGen Wed Sep 18 13:56:37 EDT 2013 */
 package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
@@ -11,9 +11,9 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Fri Sep 20 02:52:16 EDT 2013
+ * Updated by JCasGen Wed Sep 18 13:56:37 EDT 2013
  * @generated */
-public class Token_Type extends Annotation_Type {
+public class ScoredAnswer_Type extends AnswerScore_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -21,31 +21,31 @@ public class Token_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Token_Type.this.useExistingInstance) {
+  			 if (ScoredAnswer_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Token_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = ScoredAnswer_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Token(addr, Token_Type.this);
-  			   Token_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new ScoredAnswer(addr, ScoredAnswer_Type.this);
+  			   ScoredAnswer_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Token(addr, Token_Type.this);
+        } else return new ScoredAnswer(addr, ScoredAnswer_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Token.typeIndexID;
+  public final static int typeIndexID = ScoredAnswer.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.Token");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.ScoredAnswer");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Token_Type(JCas jcas, Type casType) {
+  public ScoredAnswer_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
