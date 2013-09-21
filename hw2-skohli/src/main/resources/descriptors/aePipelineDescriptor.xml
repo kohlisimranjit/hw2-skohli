@@ -27,9 +27,6 @@
       <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/Evaluator.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
-  <flowController key="flowControllerDescriptor">
-    <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/flowControllerDescriptor.xml"/>
-  </flowController>
   <!--
   <delegateAnalysisEngineSpecifiers>
 <delegateAnalysisEngine key="RoomNumber">

@@ -60,12 +60,13 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			String answerText = annotatedAnswer.getText();
 			String answerTokenText[] = answerText.split(" ");
 			tokenizedSentence = new TokenizedSentence(jCas);
-			FSArray fsAnswertokenSentenceArray = new FSArray(jCas, qTokens.length);
+			FSArray fsAnswertokenSentenceArray = new FSArray(jCas, answerTokenText.length);
 		
 //			aaaaaaaaa
 			for (int j = 0; j < answerTokenText.length; j++) {
 				annotatedToken = new AnnotatedToken(jCas);
-				annotatedToken.setTokenText(answerTokenText[j]);
+				//annotatedToken.setTokenText(answerTokenText[j+1]);
+			System.out.println(answerTokenText[j]);
 				fsAnswertokenSentenceArray.set(j, annotatedToken);
 			}
 			tokenizedSentence.setAnnotatedTokens(fsAnswertokenSentenceArray);

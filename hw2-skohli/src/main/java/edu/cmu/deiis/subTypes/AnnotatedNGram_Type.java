@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.deiis.types.NGram_Type;
 
 /** 
- * Updated by JCasGen Fri Sep 20 12:26:16 EDT 2013
+ * Updated by JCasGen Sat Sep 21 12:40:47 EDT 2013
  * @generated */
 public class AnnotatedNGram_Type extends NGram_Type {
   /** @generated */

@@ -17,6 +17,9 @@
     </configurationParameters>
     <configurationParameterSettings/>
     <typeSystemDescription>
+      <imports>
+        <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml"/>
+      </imports>
       <types>
         <typeDescription>
           <name>com.cmu.csd.types.TestElementAnnotation</name>
