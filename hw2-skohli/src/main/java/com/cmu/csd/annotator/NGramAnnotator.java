@@ -58,17 +58,18 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			double sentenceConfidence=0;
 			double nGramConfidence=0;
 			int equalizer=0;
-			
+			AnnotatedAnswer annotatedAnswer=(AnnotatedAnswer)documentAnswerArray.get(i);	
 			for (int j = 1; j <= AnnotatorConstants.MAX_GRAM; j++) {
-				equalizer+=j*j;
+				int weight=j;
+				equalizer+=weight;
 				FSArray nGramSentence = nGramTokens(tokenizedAnswerInstance, j,jCas);
-				double currConfidence=getNGramConfidence(annotatedQuestion, nGramSentence);
+				double currConfidence=getNGramConfidence(annotatedQuestion, nGramSentence,annotatedAnswer);
 				//System.out.println("recieved->"+currConfidence);
-				nGramConfidence+=j*j*currConfidence;
+				nGramConfidence+=weight*currConfidence;
 				//System.out.println("nGramConfidence"+nGramConfidence+"\t equalizer"+equalizer);
 				}
 			sentenceConfidence=nGramConfidence/equalizer;
-			AnnotatedAnswer annotatedAnswer=(AnnotatedAnswer)documentAnswerArray.get(i);
+		
 			annotatedAnswer.setScore(sentenceConfidence); 
 			System.out.println(sentenceConfidence);}
 		
@@ -125,9 +126,11 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 	
 	
 	
-	double getNGramConfidence( AnnotatedQuestion annotatedQuestion,FSArray  nGramSentence)
+	double getNGramConfidence( AnnotatedQuestion annotatedQuestion,FSArray  nGramSentence, AnnotatedAnswer annotatedAnswer)
 	{
 	String questionText=	annotatedQuestion.getText();
+	String answerText=annotatedAnswer.getText();
+	//System.out.println(questionText+"\t"+answerText);
 double confidence=0;		
 		for (int k = 0; k < nGramSentence.size(); k++) {
 			AnnotatedNGram annotatedNGram = (AnnotatedNGram) nGramSentence.get(k);
@@ -141,7 +144,16 @@ double confidence=0;
 		}
 	//	nGramSentence.get
 		confidence/=nGramSentence.size();
-//		System.out.println("returned Conf"+confidence);
+
+		double fluffFacor=(double)(questionText.split(" ").length-1)/answerText.split(" ").length;
+		if(fluffFacor<1)
+			fluffFacor=1/fluffFacor;
+		
+		confidence=confidence*fluffFacor;
+		//	confidence=confidence*
+		System.out.println("returned Conf"+confidence);
+		//if(confidence>1)
+			//confidence=1;
 return confidence;
 		
 		
