@@ -11,7 +11,7 @@ import edu.cmu.deiis.types.AnswerScore;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 00:45:35 EDT 2013
+ * Updated by JCasGen Mon Sep 23 18:53:20 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class AnnotatedAnswer extends AnswerScore {

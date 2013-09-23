@@ -4,7 +4,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>com.cmu.csd.annotator.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>NGramAnnotator</name>
-    <description/>
+    <description>This annotator takes tokens of the tokenized answers and generates Ngrams from it. It compares the questions and Ngrams and gives a score to Ngram.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters searchStrategy="language_fallback">

@@ -16,6 +16,7 @@ import edu.cmu.deiis.subTypes.AnnotatedNGram;
 import edu.cmu.deiis.subTypes.AnnotatedQuestion;
 import edu.cmu.deiis.subTypes.AnnotatedToken;
 import edu.cmu.deiis.subTypes.Document;
+import edu.cmu.deiis.subTypes.NGramMatrix;
 import edu.cmu.deiis.subTypes.TokenizedDocument;
 import edu.cmu.deiis.subTypes.TokenizedSentence;
 
@@ -24,7 +25,11 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
+		NGramMatrix nGramMatrix=new NGramMatrix(jCas);
 		TokenizedDocument tokenizedDocument = null;
+		FSArray outer=null;
+		FSArray inner=null;
+		
 		FSIndex<Annotation> tokDocIndex = jCas
 				.getAnnotationIndex(TokenizedDocument.type);
 		Iterator<Annotation> tokDocIterator = tokDocIndex.iterator();
@@ -44,6 +49,11 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 		// AnnotatedToken annotatedToken = new AnnotatedToken(jCas);
 
 		//System.out.println("-----------------------------------------------------------------------");
+		
+		
+		
+		outer=new FSArray(jCas,tokenizedDocument.getTokenizedAnswers().size());
+		
 		for (int i = 0; i < tokenizedDocument.getTokenizedAnswers().size(); i++) {
 			TokenizedSentence tokenizedAnswerInstance = tokenizedDocument
 					.getTokenizedAnswers(i);
@@ -53,22 +63,28 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			int equalizer = 0;
 			AnnotatedAnswer annotatedAnswer = (AnnotatedAnswer) documentAnswerArray
 					.get(i);
+			
+			inner =new FSArray(jCas,AnnotatorConstants.MAX_GRAM);
 			for (int j = 1; j <= AnnotatorConstants.MAX_GRAM; j++) {
 				int weight = 1;//j;
 				equalizer += weight;
 				FSArray nGramSentence = nGramTokens(tokenizedAnswerInstance, j,
 						jCas);
-				double currConfidence = getNGramConfidence(annotatedQuestion,
-						nGramSentence, annotatedAnswer);
-				// System.out.println("recieved->"+currConfidence);
-				nGramConfidence += weight * currConfidence;
+				inner.set(j-1, nGramSentence);
+			//	double currConfidence = getNGramConfidence(annotatedQuestion,nGramSentence, annotatedAnswer);
+				
+			//	nGramConfidence += weight * currConfidence;
 				// System.out.println("nGramConfidence"+nGramConfidence+"\t equalizer"+equalizer);
 			}
+			
+			outer.set(i, inner);
 			sentenceConfidence = nGramConfidence / equalizer;
 
 			annotatedAnswer.setConfidence(sentenceConfidence);//Score(sentenceConfidence);
 			//System.out.println(sentenceConfidence);
 		}
+		nGramMatrix.setMatrix(outer);
+		nGramMatrix.addToIndexes();
 
 	}
 
@@ -94,41 +110,12 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			annotatedNGram.setNGramToken(text.trim());
 			annotatedNGram.setBegin(begin);
 			annotatedNGram.setEnd(annotatedNGram.getBegin() + text.length());
-			// System.out.println(text);
+			
 			nGramSentence.set(i, annotatedNGram);
 		}
 		return nGramSentence;
 	}
 
-	double getNGramConfidence(AnnotatedQuestion annotatedQuestion,
-			FSArray nGramSentence, AnnotatedAnswer annotatedAnswer) {
-		String questionText = annotatedQuestion.getText();
-		String answerText = annotatedAnswer.getText();
-		// System.out.println(questionText+"\t"+answerText);
-		double confidence = 0;
-		for (int k = 0; k < nGramSentence.size(); k++) {
-			AnnotatedNGram annotatedNGram = (AnnotatedNGram) nGramSentence
-					.get(k);
-			String nGramString = annotatedNGram.getNGramToken();
-
-			if (questionText.indexOf(nGramString) > -1)
-				confidence++;
-			// System.out.println(annotatedNGram.getNGramToken());
-
-		}
-		// nGramSentence.get
-		confidence /= nGramSentence.size();
-
-		double fluffFacor = ((double) answerText.split(" ").length)
-				/ (questionText.split(" ").length - 1);
-		if (fluffFacor > 1) {
-
-
-			confidence = confidence * fluffFacor;
-		}
-		
-		return confidence;
-
-	}
+	
 
 }

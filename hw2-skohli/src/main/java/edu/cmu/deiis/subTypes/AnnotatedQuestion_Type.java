@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.deiis.types.Question_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 00:45:35 EDT 2013
+ * Updated by JCasGen Mon Sep 23 18:53:21 EDT 2013
  * @generated */
 public class AnnotatedQuestion_Type extends Question_Type {
   /** @generated */
