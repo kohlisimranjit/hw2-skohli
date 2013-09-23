@@ -54,7 +54,7 @@ public class Evaluator extends JCasAnnotator_ImplBase {
 		
 		for(int i=0;i<documentAnswerArray.size();i++){		
 			documentAnswerArray.set(i, AnnotatedAnswerrray[i]);
-	System.out.println(AnnotatedAnswerrray[i].getText()+" "+AnnotatedAnswerrray[i].getScore());
+	System.out.println(AnnotatedAnswerrray[i].getText()+" "+AnnotatedAnswerrray[i].getConfidence());
 		
 		}
 		//AnnotatedAnswer ArrayAnnotated []=new AnnotatedAnswer[10];  	

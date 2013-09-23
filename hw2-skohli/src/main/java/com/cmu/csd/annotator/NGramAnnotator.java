@@ -43,8 +43,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 		FSArray documentAnswerArray = document.getAnswers();
 		// AnnotatedToken annotatedToken = new AnnotatedToken(jCas);
 
-		System.out
-				.println("-----------------------------------------------------------------------");
+		//System.out.println("-----------------------------------------------------------------------");
 		for (int i = 0; i < tokenizedDocument.getTokenizedAnswers().size(); i++) {
 			TokenizedSentence tokenizedAnswerInstance = tokenizedDocument
 					.getTokenizedAnswers(i);
@@ -55,7 +54,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			AnnotatedAnswer annotatedAnswer = (AnnotatedAnswer) documentAnswerArray
 					.get(i);
 			for (int j = 1; j <= AnnotatorConstants.MAX_GRAM; j++) {
-				int weight = j;
+				int weight = 1;//j;
 				equalizer += weight;
 				FSArray nGramSentence = nGramTokens(tokenizedAnswerInstance, j,
 						jCas);
@@ -67,8 +66,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			}
 			sentenceConfidence = nGramConfidence / equalizer;
 
-			annotatedAnswer.setScore(sentenceConfidence);
-			System.out.println(sentenceConfidence);
+			annotatedAnswer.setConfidence(sentenceConfidence);//Score(sentenceConfidence);
+			//System.out.println(sentenceConfidence);
 		}
 
 	}
@@ -120,17 +119,14 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 		// nGramSentence.get
 		confidence /= nGramSentence.size();
 
-		double fluffFacor = (double) answerText.split(" ").length
+		double fluffFacor = ((double) answerText.split(" ").length)
 				/ (questionText.split(" ").length - 1);
 		if (fluffFacor > 1) {
-//			fluffFacor = 1 / fluffFacor;
+
 
 			confidence = confidence * fluffFacor;
 		}
-		// confidence=confidence*
-		System.out.println("returned Conf" + confidence);
-		// if(confidence>1)
-		// confidence=1;
+		
 		return confidence;
 
 	}

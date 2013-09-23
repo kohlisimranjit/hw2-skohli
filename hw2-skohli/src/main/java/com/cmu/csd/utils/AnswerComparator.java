@@ -10,7 +10,7 @@ static int ORDER_MULTIPLIER=-1;
 private static AnswerComparator answerComparator=null;
 	@Override
 	public int compare(AnnotatedAnswer o1, AnnotatedAnswer o2) {
-		double diff=o1.getScore()-o2.getScore();
+		double diff=o1.getConfidence()-o2.getConfidence();
 		
 		if(diff<0)
 			return -1*ORDER_MULTIPLIER;
