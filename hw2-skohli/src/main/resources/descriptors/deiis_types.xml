@@ -111,10 +111,15 @@
     <typeDescription>
       <name>edu.cmu.deiis.subTypes.AnnotatedToken</name>
       <description/>
-      <supertypeName>uima.cas.AnnotationBase</supertypeName>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>tokenText</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>pos</name>
           <description/>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>

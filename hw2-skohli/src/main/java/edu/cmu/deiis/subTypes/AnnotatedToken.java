@@ -7,6 +7,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import edu.cmu.deiis.types.Annotation;
+
+
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
@@ -14,10 +17,10 @@ import edu.cmu.deiis.types.Token;
 
 
 /** 
- * Updated by JCasGen Sat Sep 21 12:40:47 EDT 2013
- * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TestElementAnnotator.xml
+ * Updated by JCasGen Sun Sep 22 21:07:31 EDT 2013
+ * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
-public class AnnotatedToken extends AnnotationBase {
+public class AnnotatedToken extends Annotation {
   /** @generated
    * @ordered 
    */
@@ -49,6 +52,14 @@ public class AnnotatedToken extends AnnotationBase {
     readObject();   
   } 
 
+  /** @generated */  
+  public AnnotatedToken(JCas jcas, int begin, int end) {
+    super(jcas);
+    setBegin(begin);
+    setEnd(end);
+    readObject();
+  }   
+
   /** <!-- begin-user-doc -->
     * Write your own initialization here
     * <!-- end-user-doc -->
@@ -73,6 +84,24 @@ public class AnnotatedToken extends AnnotationBase {
     if (AnnotatedToken_Type.featOkTst && ((AnnotatedToken_Type)jcasType).casFeat_tokenText == null)
       jcasType.jcas.throwFeatMissing("tokenText", "edu.cmu.deiis.subTypes.AnnotatedToken");
     jcasType.ll_cas.ll_setStringValue(addr, ((AnnotatedToken_Type)jcasType).casFeatCode_tokenText, v);}    
+   
+    
+  //*--------------*
+  //* Feature: pos
+
+  /** getter for pos - gets 
+   * @generated */
+  public String getPos() {
+    if (AnnotatedToken_Type.featOkTst && ((AnnotatedToken_Type)jcasType).casFeat_pos == null)
+      jcasType.jcas.throwFeatMissing("pos", "edu.cmu.deiis.subTypes.AnnotatedToken");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((AnnotatedToken_Type)jcasType).casFeatCode_pos);}
+    
+  /** setter for pos - sets  
+   * @generated */
+  public void setPos(String v) {
+    if (AnnotatedToken_Type.featOkTst && ((AnnotatedToken_Type)jcasType).casFeat_pos == null)
+      jcasType.jcas.throwFeatMissing("pos", "edu.cmu.deiis.subTypes.AnnotatedToken");
+    jcasType.ll_cas.ll_setStringValue(addr, ((AnnotatedToken_Type)jcasType).casFeatCode_pos, v);}    
   }
 
     

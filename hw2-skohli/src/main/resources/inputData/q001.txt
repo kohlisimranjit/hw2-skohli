@@ -7,4 +7,3 @@ A 1 Booth assassinated Lincoln.
 A 0 Lincoln assassinated Booth.
 A 1 Lincoln was assassinated by Booth.
 A 0 Booth was assassinated by Lincoln.
-a a a a a aa a 1 2 3 4 5 6 7 8

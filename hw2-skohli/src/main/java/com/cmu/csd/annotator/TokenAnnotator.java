@@ -38,7 +38,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 
 		String qText = annotatedQuestion.getText();
 		TokenizedSentence tokenizedSentence = new TokenizedSentence(jCas);
-
+		
 		String qTokens[] = qText.split(" ");
 		FSArray fsQuestiontokenArray = new FSArray(jCas, qTokens.length);
 		// FSList fsList=new FSList(jCas);
@@ -63,10 +63,15 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			FSArray fsAnswertokenSentenceArray = new FSArray(jCas, answerTokenText.length);
 		
 //			aaaaaaaaa
+			int begin=annotatedAnswer.getBegin(); 
 			for (int j = 0; j < answerTokenText.length; j++) {
 				annotatedToken = new AnnotatedToken(jCas);
-				//annotatedToken.setTokenText(answerTokenText[j+1]);
-			System.out.println(answerTokenText[j]);
+				annotatedToken.setTokenText(answerTokenText[j]);
+				
+				annotatedToken.setBegin(begin);
+				annotatedToken.setEnd(annotatedToken.getBegin()+annotatedToken.getTokenText().length());
+				begin=annotatedToken.getEnd()+1;
+		//	System.out.println(answerTokenText[j]);
 				fsAnswertokenSentenceArray.set(j, annotatedToken);
 			}
 			tokenizedSentence.setAnnotatedTokens(fsAnswertokenSentenceArray);

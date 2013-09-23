@@ -19,8 +19,8 @@ import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Sat Sep 21 12:40:47 EDT 2013
- * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TestElementAnnotator.xml
+ * Updated by JCasGen Sun Sep 22 21:07:31 EDT 2013
+ * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Document extends Annotation {
   /** @generated
