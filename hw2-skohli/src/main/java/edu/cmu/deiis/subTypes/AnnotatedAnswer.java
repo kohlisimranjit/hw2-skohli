@@ -11,7 +11,7 @@ import edu.cmu.deiis.types.AnswerScore;
 
 
 /** 
- * Updated by JCasGen Sun Sep 22 21:07:31 EDT 2013
+ * Updated by JCasGen Mon Sep 23 00:45:35 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class AnnotatedAnswer extends AnswerScore {
@@ -96,6 +96,42 @@ public class AnnotatedAnswer extends AnswerScore {
     if (AnnotatedAnswer_Type.featOkTst && ((AnnotatedAnswer_Type)jcasType).casFeat_answerId == null)
       jcasType.jcas.throwFeatMissing("answerId", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
     jcasType.ll_cas.ll_setStringValue(addr, ((AnnotatedAnswer_Type)jcasType).casFeatCode_answerId, v);}    
+   
+    
+  //*--------------*
+  //* Feature: sentiment
+
+  /** getter for sentiment - gets 
+   * @generated */
+  public int getSentiment() {
+    if (AnnotatedAnswer_Type.featOkTst && ((AnnotatedAnswer_Type)jcasType).casFeat_sentiment == null)
+      jcasType.jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((AnnotatedAnswer_Type)jcasType).casFeatCode_sentiment);}
+    
+  /** setter for sentiment - sets  
+   * @generated */
+  public void setSentiment(int v) {
+    if (AnnotatedAnswer_Type.featOkTst && ((AnnotatedAnswer_Type)jcasType).casFeat_sentiment == null)
+      jcasType.jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
+    jcasType.ll_cas.ll_setIntValue(addr, ((AnnotatedAnswer_Type)jcasType).casFeatCode_sentiment, v);}    
+   
+    
+  //*--------------*
+  //* Feature: voice
+
+  /** getter for voice - gets 
+   * @generated */
+  public int getVoice() {
+    if (AnnotatedAnswer_Type.featOkTst && ((AnnotatedAnswer_Type)jcasType).casFeat_voice == null)
+      jcasType.jcas.throwFeatMissing("voice", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((AnnotatedAnswer_Type)jcasType).casFeatCode_voice);}
+    
+  /** setter for voice - sets  
+   * @generated */
+  public void setVoice(int v) {
+    if (AnnotatedAnswer_Type.featOkTst && ((AnnotatedAnswer_Type)jcasType).casFeat_voice == null)
+      jcasType.jcas.throwFeatMissing("voice", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
+    jcasType.ll_cas.ll_setIntValue(addr, ((AnnotatedAnswer_Type)jcasType).casFeatCode_voice, v);}    
   }
 
     
