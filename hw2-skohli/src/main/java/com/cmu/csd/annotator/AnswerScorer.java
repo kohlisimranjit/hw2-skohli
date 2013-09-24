@@ -105,7 +105,7 @@ public class AnswerScorer extends JCasAnnotator_ImplBase {
 		{	
 		AnnotatedAnswer annotatedAnswer = (AnnotatedAnswer) documentAnswerArray
 				.get(i);
-		if(annotatedAnswer.getConfidence()>document.getThreshold())
+		if(annotatedAnswer.getConfidence()>=document.getThreshold())
 		
 		{annotatedAnswer.setScore(1);}
 		}
