@@ -16,6 +16,7 @@ import com.cmu.csd.utils.AnswerComparator;
 
 import edu.cmu.deiis.subTypes.AnnotatedAnswer;
 import edu.cmu.deiis.subTypes.Document;
+import edu.cmu.deiis.types.Answer;
 
 public class Evaluator extends JCasAnnotator_ImplBase {
 
@@ -35,6 +36,8 @@ public class Evaluator extends JCasAnnotator_ImplBase {
 		List<AnnotatedAnswer> AnnotatedAnswerList=new ArrayList<AnnotatedAnswer>();
 		FSArray documentAnswerArray = document.getAnswers();
 		
+		int correct=0;
+		int N=0;
 		for(int i=0;i<documentAnswerArray.size();i++)
 		{
 			AnnotatedAnswerList.add((AnnotatedAnswer)documentAnswerArray.get(i));
@@ -54,11 +57,20 @@ public class Evaluator extends JCasAnnotator_ImplBase {
 		
 		for(int i=0;i<documentAnswerArray.size();i++){		
 			documentAnswerArray.set(i, AnnotatedAnswerrray[i]);
-	System.out.println(AnnotatedAnswerrray[i].getText()+" "+AnnotatedAnswerrray[i].getConfidence());
+			Answer answer=AnnotatedAnswerrray[i].getAnswer();
+			
+			if(AnnotatedAnswerrray[i].getScore()==1)
+			{N++;
+			
+			if(answer.getIsCorrect())
+			correct++;
+			}
+	System.out.println(AnnotatedAnswerrray[i].getText()+" "+AnnotatedAnswerrray[i].getConfidence()+" "+AnnotatedAnswerrray[i].getScore()+" "+answer.getIsCorrect());
 		
 		}
 		//AnnotatedAnswer ArrayAnnotated []=new AnnotatedAnswer[10];  	
 		
+		System.out.println("Precision->"+(double)correct/N);
 		
 		
 		

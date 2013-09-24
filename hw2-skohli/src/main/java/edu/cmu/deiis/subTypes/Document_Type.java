@@ -16,7 +16,7 @@ import edu.cmu.deiis.types.Annotation_Type;
 import org.apache.uima.jcas.cas.AnnotationBase_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
+ * Updated by JCasGen Mon Sep 23 21:28:04 EDT 2013
  * @generated */
 public class Document_Type extends Annotation_Type {
   /** @generated */
@@ -102,6 +102,24 @@ public class Document_Type extends Annotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i, v);
   }
  
+ 
+  /** @generated */
+  final Feature casFeat_threshold;
+  /** @generated */
+  final int     casFeatCode_threshold;
+  /** @generated */ 
+  public double getThreshold(int addr) {
+        if (featOkTst && casFeat_threshold == null)
+      jcas.throwFeatMissing("threshold", "edu.cmu.deiis.subTypes.Document");
+    return ll_cas.ll_getDoubleValue(addr, casFeatCode_threshold);
+  }
+  /** @generated */    
+  public void setThreshold(int addr, double v) {
+        if (featOkTst && casFeat_threshold == null)
+      jcas.throwFeatMissing("threshold", "edu.cmu.deiis.subTypes.Document");
+    ll_cas.ll_setDoubleValue(addr, casFeatCode_threshold, v);}
+    
+  
 
 
 
@@ -118,6 +136,10 @@ public class Document_Type extends Annotation_Type {
  
     casFeat_answers = jcas.getRequiredFeatureDE(casType, "answers", "uima.cas.FSArray", featOkTst);
     casFeatCode_answers  = (null == casFeat_answers) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answers).getCode();
+
+ 
+    casFeat_threshold = jcas.getRequiredFeatureDE(casType, "threshold", "uima.cas.Double", featOkTst);
+    casFeatCode_threshold  = (null == casFeat_threshold) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_threshold).getCode();
 
   }
 }

@@ -17,16 +17,16 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		// TODO Auto-generated method stub
 		String text = jCas.getDocumentText();
-		System.out.println(text);
+		// System.out.println(text);
 		String lines[] = text.split("\n");
-		String question =null;
-		if(lines.length>1)
-			question =lines[0];
+		String question = null;
+		if (lines.length > 1)
+			question = lines[0];
 		Document document = new Document(jCas);
 
 		FSArray answers = new FSArray(jCas, lines.length - 1);
 		AnnotatedQuestion aq = new AnnotatedQuestion(jCas);
-		
+
 		aq.setText(question.substring(question.indexOf('Q')).trim());
 		aq.setSentiment(getSentiment(aq.getText()));
 		document.setQuestion(aq);
@@ -56,49 +56,47 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 			else
 				sentenceStart = 0;
 
-			lines[i+1]=lines[i+1].substring(0, lines[i+1].lastIndexOf("."));
+			lines[i + 1] = lines[i + 1].substring(0,
+					lines[i + 1].lastIndexOf("."));
 			annotatedAnswer.setText(lines[i + 1].substring(sentenceStart));
 			annotatedAnswer.setBegin(sentenceStart);
 			annotatedAnswer.setEnd(lines[i + 1].length() - 1);
 			AnswerScore answerScore = new AnswerScore(jCas);
-			annotatedAnswer.setSentiment(getSentiment(annotatedAnswer.getText()));
+			annotatedAnswer
+					.setSentiment(getSentiment(annotatedAnswer.getText()));
 			Answer answerType = new Answer(jCas);
 			if (isCorrect != null)
-				answerType.setIsCorrect(isCorrect);
+				{///System.out.println(isCorrect);
+				answerType.setIsCorrect(isCorrect.booleanValue());}
 			answerScore.setAnswer(answerType);
 
-			// annotatedAnswer.set
+			 annotatedAnswer.setAnswer(answerType);
 			answers.set(i, annotatedAnswer);
 		}
 		document.setAnswers(answers);
 		document.addToIndexes();
 
 	}
-	
-	
-	static int getSentiment(String sentence)
-	{
-		
-		int sent=1;
-		int ptr=0;
-		
-		//sentence=
-		
-		
-		if((ptr=sentence.substring(ptr,sentence.length()).indexOf(" not"))>-1)
-			{sent*=-1;
-			
-			}
-		ptr=0;
-		if((ptr=sentence.substring(ptr,sentence.length()).indexOf("n't"))>-1)
-		{sent*=-1;
-		
+
+	static int getSentiment(String sentence) {
+
+		int sent = 1;
+		int ptr = 0;
+
+		// sentence=
+
+		if ((ptr = sentence.substring(ptr, sentence.length()).indexOf(" not")) > -1) {
+			sent *= -1;
+
 		}
-			
-			
+		ptr = 0;
+		if ((ptr = sentence.substring(ptr, sentence.length()).indexOf("n't")) > -1) {
+			sent *= -1;
+
+		}
+
+		// System.out.println("returned "+sent);
 		return sent;
-		
-		
-		
+
 	}
 }

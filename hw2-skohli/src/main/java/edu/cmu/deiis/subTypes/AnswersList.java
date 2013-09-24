@@ -12,7 +12,7 @@ import org.apache.uima.jcas.cas.FSList;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
+ * Updated by JCasGen Mon Sep 23 21:28:04 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class AnswersList extends AnnotationBase {

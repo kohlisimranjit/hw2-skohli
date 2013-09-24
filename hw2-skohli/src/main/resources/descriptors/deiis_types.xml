@@ -195,6 +195,11 @@
           <elementType>edu.cmu.deiis.subTypes.AnnotatedAnswer</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
+      <featureDescription>
+          <name>threshold</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>

@@ -72,27 +72,47 @@ public class AnswerScorer extends JCasAnnotator_ImplBase {
 					.get(i);
 			
 			inner =(FSArray)outer.get(i);
+			//System.out.println("annotatedAnswer.getSentiment()"+annotatedAnswer.getSentiment()+"\t annotatedQuestion.getConfidence()"+annotatedQuestion.getConfidence());
+			if(annotatedAnswer.getSentiment()==annotatedQuestion.getSentiment()){
 			for (int j = 1; j <= AnnotatorConstants.MAX_GRAM; j++) {
 				int weight = 1;
 				equalizer += weight;
 				//equalizer=1;	
 				FSArray nGramSentence = (FSArray)inner.get(j-1);
 		//		inner.set(j, nGramSentence);
-				double currConfidence = getNGramConfidence(annotatedQuestion,nGramSentence, annotatedAnswer);
+				double currConfidence =0;
+				currConfidence=getNGramConfidence(annotatedQuestion,nGramSentence, annotatedAnswer);
 				
 				nGramConfidence += weight * currConfidence;
 				// System.out.println("nGramConfidence"+nGramConfidence+"\t equalizer"+equalizer);
 			}
 			
 			//outer.set(i, inner);
-			sentenceConfidence = nGramConfidence / equalizer;
+			sentenceConfidence = nGramConfidence / equalizer;}
+			
+			if(sentenceConfidence<1&& sentenceConfidence>0)
 			meanScore+=sentenceConfidence;
 			annotatedAnswer.setConfidence(sentenceConfidence);//Score(sentenceConfidence);
 			//System.out.println(sentenceConfidence);
 		}
-		
+		//meanScore=Math.sqrt(meanScore);
 		meanScore/=tokenizedDocument.getTokenizedAnswers().size();
-
+	document.setThreshold(meanScore);	
+	
+	
+	
+	for (int i = 0; i < tokenizedDocument.getTokenizedAnswers().size(); i++) 
+		{	
+		AnnotatedAnswer annotatedAnswer = (AnnotatedAnswer) documentAnswerArray
+				.get(i);
+		if(annotatedAnswer.getConfidence()>document.getThreshold())
+		
+		{annotatedAnswer.setScore(1);}
+		}
+	
+	
+	
+//System.out.println("meanScore"+meanScore);
 	}
 
 	

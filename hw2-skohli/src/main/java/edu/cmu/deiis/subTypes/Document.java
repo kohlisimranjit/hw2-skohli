@@ -19,7 +19,7 @@ import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
+ * Updated by JCasGen Mon Sep 23 21:28:04 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Document extends Annotation {
@@ -118,6 +118,24 @@ public class Document extends Annotation {
       jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deiis.subTypes.Document");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Document_Type)jcasType).casFeatCode_answers), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Document_Type)jcasType).casFeatCode_answers), i, jcasType.ll_cas.ll_getFSRef(v));}
+   
+    
+  //*--------------*
+  //* Feature: threshold
+
+  /** getter for threshold - gets 
+   * @generated */
+  public double getThreshold() {
+    if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_threshold == null)
+      jcasType.jcas.throwFeatMissing("threshold", "edu.cmu.deiis.subTypes.Document");
+    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Document_Type)jcasType).casFeatCode_threshold);}
+    
+  /** setter for threshold - sets  
+   * @generated */
+  public void setThreshold(double v) {
+    if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_threshold == null)
+      jcasType.jcas.throwFeatMissing("threshold", "edu.cmu.deiis.subTypes.Document");
+    jcasType.ll_cas.ll_setDoubleValue(addr, ((Document_Type)jcasType).casFeatCode_threshold, v);}    
   }
 
     
