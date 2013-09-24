@@ -9,12 +9,12 @@ import org.json.simple.*; // json package, download at http://code.google.com/p/
 public class Thesaurus { 
   public static void main(String[] args) { 
 // NOTE: replace test_only with your own key 
-    new SendRequest("Lincoln", "en_US", "QMc2jQWNBgp4kUYcb1rU", "json"); 
+   // new SendRequest("Lincoln", "en_US", "QMc2jQWNBgp4kUYcb1rU", "json"); 
   } 
 } // end of Thesaurus 
 
 class SendRequest { 
-  final String endpoint = "http://thesaurus.altervista.org/thesaurus/v1"; 
+ /* final String endpoint = "http://thesaurus.altervista.org/thesaurus/v1"; 
 
   public SendRequest(String word, String language, String key, String output) { 
    key="QMc2jQWNBgp4kUYcb1rU";
@@ -43,8 +43,8 @@ class SendRequest {
       e.printStackTrace(); 
     } catch (java.io.IOException e) { 
       e.printStackTrace(); 
-    } 
-  } 
+    } */
+  
   public static void main(String args[]){
 	//  new SendRequest();
   }
