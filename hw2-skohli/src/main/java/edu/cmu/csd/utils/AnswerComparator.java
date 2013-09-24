@@ -1,4 +1,4 @@
-package com.cmu.csd.utils;
+package edu.cmu.csd.utils;
 
 import java.util.Comparator;
 

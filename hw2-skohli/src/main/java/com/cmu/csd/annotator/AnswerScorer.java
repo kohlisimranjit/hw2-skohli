@@ -9,8 +9,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import com.cmu.csd.constants.AnnotatorConstants;
-
+import edu.cmu.csd.constants.AnnotatorConstants;
 import edu.cmu.deiis.subTypes.AnnotatedAnswer;
 import edu.cmu.deiis.subTypes.AnnotatedNGram;
 import edu.cmu.deiis.subTypes.AnnotatedQuestion;

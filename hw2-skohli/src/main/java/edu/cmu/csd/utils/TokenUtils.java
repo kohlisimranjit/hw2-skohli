@@ -1,4 +1,4 @@
-package com.cmu.csd.utils;
+package edu.cmu.csd.utils;
 
 public class TokenUtils {
 

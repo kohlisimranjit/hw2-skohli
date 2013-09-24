@@ -1,4 +1,4 @@
-package com.cmu.csd.evaluator;
+package com.cmu.csd.annotator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,8 +12,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import com.cmu.csd.utils.AnswerComparator;
-
+import edu.cmu.csd.utils.AnswerComparator;
 import edu.cmu.deiis.subTypes.AnnotatedAnswer;
 import edu.cmu.deiis.subTypes.Document;
 import edu.cmu.deiis.types.Answer;
