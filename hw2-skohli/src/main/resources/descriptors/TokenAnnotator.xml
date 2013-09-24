@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.TokenAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotator.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenAnnotator</name>
     <description>This annotator generates tokens for each answer.
-It will assign other metadata to token as well.
-</description>
+It will assign other metadata to token as well.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>

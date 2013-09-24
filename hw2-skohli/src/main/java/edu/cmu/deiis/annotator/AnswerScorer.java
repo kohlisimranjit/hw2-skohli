@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 /**This annotator class assigns Confidence scores to each answer.
  * Based upon the threshold score it will assign a score of 1 or 0 to the answer.
  */

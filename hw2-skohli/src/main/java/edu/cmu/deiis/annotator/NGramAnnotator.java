@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 /**This annotator class generate NGram for each answer.
 These NGrams will be filled in the NGramMatrix
 */

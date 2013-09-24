@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.TestElementAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotator.TestElementAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TestElementAnnotator</name>
     <description>This annotator class splits a given document into question and answer
-It will also assign assign  sentiment to each sentence
-
-</description>
+It will also assign assign  sentiment to each sentence</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>

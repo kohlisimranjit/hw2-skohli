@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 
 public class Snippet {
 	public static void main(String[] args) {

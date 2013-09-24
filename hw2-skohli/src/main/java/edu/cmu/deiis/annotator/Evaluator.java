@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 /**This annotator class will display sorted answers based upon confidence
 * It will display answertext the assigned confidence, score and actual score.
 */

@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 /**This annotator class generates tokens for each answer.
 * It will assign other metadata to token as well.
 */

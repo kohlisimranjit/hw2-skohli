@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.Evaluator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotator.Evaluator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>Evaluator</name>
     <description>This annotator  will display sorted answers based upon confidence
- It will display answertext the assigned confidence, score and actual score.
-</description>
+ It will display answertext the assigned confidence, score and actual score.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

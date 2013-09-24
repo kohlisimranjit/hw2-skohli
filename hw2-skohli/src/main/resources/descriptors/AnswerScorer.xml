@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.AnswerScorer</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotator.AnswerScorer</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>AnswerScorer</name>
     <description>This annotator  assigns Confidence scores to each answer.
-  Based upon the threshold score it will assign a score of 1 or 0 to the answer.
- </description>
+  Based upon the threshold score it will assign a score of 1 or 0 to the answer.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

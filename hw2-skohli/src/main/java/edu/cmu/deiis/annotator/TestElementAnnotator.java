@@ -1,4 +1,4 @@
-package edu.cmu.csd.annotator;
+package edu.cmu.deiis.annotator;
 /**This annotator class splits a given document into question and answer
 * It will also assign assign  sentiment to each sentence
 */
