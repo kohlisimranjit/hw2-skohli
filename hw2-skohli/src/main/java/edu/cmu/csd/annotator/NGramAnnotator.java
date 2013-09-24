@@ -1,4 +1,4 @@
-package com.cmu.csd.annotator;
+package edu.cmu.csd.annotator;
 
 import java.util.Iterator;
 

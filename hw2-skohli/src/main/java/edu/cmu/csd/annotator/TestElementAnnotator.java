@@ -1,4 +1,4 @@
-package com.cmu.csd.annotator;
+package edu.cmu.csd.annotator;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
