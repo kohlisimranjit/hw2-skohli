@@ -1,10 +1,10 @@
 package edu.cmu.deiis.utils;
 
 import java.io.BufferedReader; 
-import java.net.HttpURLConnection; 
-import java.net.URL; 
-import java.net.URLEncoder; 
-import org.json.simple.*; // json package, download at http://code.google.com/p/json-simple/ 
+//import java.net.HttpURLConnection; 
+//import java.net.URL; 
+//import java.net.URLEncoder; 
+//import org.json.simple.*; // json package, download at http://code.google.com/p/json-simple/ 
 
 public class Thesaurus { 
   public static void main(String[] args) { 
