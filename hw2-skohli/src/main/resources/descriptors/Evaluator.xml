@@ -4,7 +4,9 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.Evaluator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>Evaluator</name>
-    <description/>
+    <description>This annotator  will display sorted answers based upon confidence
+ It will display answertext the assigned confidence, score and actual score.
+</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

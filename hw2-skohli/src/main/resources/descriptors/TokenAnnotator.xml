@@ -4,7 +4,9 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenAnnotator</name>
-    <description/>
+    <description>This annotator generates tokens for each answer.
+It will assign other metadata to token as well.
+</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>

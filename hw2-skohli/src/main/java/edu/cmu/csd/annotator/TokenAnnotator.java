@@ -1,5 +1,7 @@
 package edu.cmu.csd.annotator;
-
+/**This annotator class generates tokens for each answer.
+* It will assign other metadata to token as well.
+*/
 import java.io.StringReader;
 import java.util.Iterator;
 

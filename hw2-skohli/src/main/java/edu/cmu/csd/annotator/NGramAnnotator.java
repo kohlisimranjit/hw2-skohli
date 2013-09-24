@@ -1,5 +1,7 @@
 package edu.cmu.csd.annotator;
-
+/**This annotator class generate NGram for each answer.
+These NGrams will be filled in the NGramMatrix
+*/
 import java.util.Iterator;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;

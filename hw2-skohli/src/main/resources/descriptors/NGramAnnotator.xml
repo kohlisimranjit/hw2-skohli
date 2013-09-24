@@ -4,7 +4,10 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>NGramAnnotator</name>
-    <description>This annotator takes tokens of the tokenized answers and generates Ngrams from it. It compares the questions and Ngrams and gives a score to Ngram.</description>
+    <description>This annotator generate NGram for each answer.
+These NGrams will be filled in the NGramMatrix
+
+</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters searchStrategy="language_fallback">

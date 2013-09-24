@@ -4,7 +4,10 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.csd.annotator.TestElementAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TestElementAnnotator</name>
-    <description/>
+    <description>This annotator class splits a given document into question and answer
+It will also assign assign  sentiment to each sentence
+
+</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>

@@ -38,7 +38,7 @@
   
     <analysisEngineMetaData>
     <name>aeDescriptor</name>
-    <description/>
+    <description>This is the complex Analysis Engine. It has the static flow of annotators</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters searchStrategy="language_fallback"/>

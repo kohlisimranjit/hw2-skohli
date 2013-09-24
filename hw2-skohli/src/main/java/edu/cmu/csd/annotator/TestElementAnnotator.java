@@ -1,5 +1,7 @@
 package edu.cmu.csd.annotator;
-
+/**This annotator class splits a given document into question and answer
+* It will also assign assign  sentiment to each sentence
+*/
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
