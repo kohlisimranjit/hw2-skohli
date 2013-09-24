@@ -1,4 +1,4 @@
-package edu.cmu.csd.utils;
+package edu.cmu.deiis.utils;
 
 import java.io.BufferedReader; 
 import java.net.HttpURLConnection; 
