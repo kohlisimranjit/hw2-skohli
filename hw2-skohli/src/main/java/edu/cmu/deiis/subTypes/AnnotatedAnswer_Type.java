@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.deiis.types.AnswerScore_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 21:28:04 EDT 2013
+ * Updated by JCasGen Mon Sep 23 23:29:52 EDT 2013
  * @generated */
 public class AnnotatedAnswer_Type extends AnswerScore_Type {
   /** @generated */
@@ -97,24 +97,6 @@ public class AnnotatedAnswer_Type extends AnswerScore_Type {
     ll_cas.ll_setIntValue(addr, casFeatCode_sentiment, v);}
     
   
- 
-  /** @generated */
-  final Feature casFeat_voice;
-  /** @generated */
-  final int     casFeatCode_voice;
-  /** @generated */ 
-  public int getVoice(int addr) {
-        if (featOkTst && casFeat_voice == null)
-      jcas.throwFeatMissing("voice", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
-    return ll_cas.ll_getIntValue(addr, casFeatCode_voice);
-  }
-  /** @generated */    
-  public void setVoice(int addr, int v) {
-        if (featOkTst && casFeat_voice == null)
-      jcas.throwFeatMissing("voice", "edu.cmu.deiis.subTypes.AnnotatedAnswer");
-    ll_cas.ll_setIntValue(addr, casFeatCode_voice, v);}
-    
-  
 
 
 
@@ -135,10 +117,6 @@ public class AnnotatedAnswer_Type extends AnswerScore_Type {
  
     casFeat_sentiment = jcas.getRequiredFeatureDE(casType, "sentiment", "uima.cas.Integer", featOkTst);
     casFeatCode_sentiment  = (null == casFeat_sentiment) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentiment).getCode();
-
- 
-    casFeat_voice = jcas.getRequiredFeatureDE(casType, "voice", "uima.cas.Integer", featOkTst);
-    casFeatCode_voice  = (null == casFeat_voice) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_voice).getCode();
 
   }
 }

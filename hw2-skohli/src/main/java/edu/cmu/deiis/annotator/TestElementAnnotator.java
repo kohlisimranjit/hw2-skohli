@@ -40,7 +40,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 			AnnotatedAnswer annotatedAnswer = new AnnotatedAnswer(jCas);
 			Boolean isCorrect = null;
 			String line = lines[i + 1];
-			
+			annotatedAnswer.setAnswerId((i+1)+"");
 			int sentenceStart = lines[i + 1].indexOf("A 0 ");
 
 			if (sentenceStart == 0) {

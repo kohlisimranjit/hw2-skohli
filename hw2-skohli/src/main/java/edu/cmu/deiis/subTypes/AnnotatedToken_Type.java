@@ -18,7 +18,7 @@ import org.apache.uima.jcas.cas.AnnotationBase_Type;
 import edu.cmu.deiis.types.Token_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 21:28:04 EDT 2013
+ * Updated by JCasGen Mon Sep 23 23:29:52 EDT 2013
  * @generated */
 public class AnnotatedToken_Type extends Annotation_Type {
   /** @generated */
