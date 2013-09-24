@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 18:53:21 EDT 2013
+ * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
  * @generated */
 public class NGramMatrix_Type extends Annotation_Type {
   /** @generated */
@@ -67,7 +67,7 @@ public class NGramMatrix_Type extends Annotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_matrix), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_matrix), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_matrix), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_matrix), i);
   }
    
   /** @generated */ 

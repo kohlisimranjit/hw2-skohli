@@ -79,4 +79,13 @@
 		<connection>scm:git:git@github.com:kohlisimranjit/hw2-skohli.git</connection>
 		<developerConnection>scm:git:git@github.com:kohlisimranjit/hw2-skohli.git</developerConnection>
 	</scm>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>edu.stanford.nlp</groupId>
+				<artifactId>stanford-corenlp</artifactId>
+				<version>3.2.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

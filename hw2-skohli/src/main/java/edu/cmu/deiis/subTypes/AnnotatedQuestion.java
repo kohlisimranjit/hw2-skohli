@@ -11,7 +11,7 @@ import edu.cmu.deiis.types.Question;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 18:53:21 EDT 2013
+ * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
  * XML source: /home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class AnnotatedQuestion extends Question {
@@ -78,6 +78,24 @@ public class AnnotatedQuestion extends Question {
     if (AnnotatedQuestion_Type.featOkTst && ((AnnotatedQuestion_Type)jcasType).casFeat_text == null)
       jcasType.jcas.throwFeatMissing("text", "edu.cmu.deiis.subTypes.AnnotatedQuestion");
     jcasType.ll_cas.ll_setStringValue(addr, ((AnnotatedQuestion_Type)jcasType).casFeatCode_text, v);}    
+   
+    
+  //*--------------*
+  //* Feature: sentiment
+
+  /** getter for sentiment - gets 
+   * @generated */
+  public int getSentiment() {
+    if (AnnotatedQuestion_Type.featOkTst && ((AnnotatedQuestion_Type)jcasType).casFeat_sentiment == null)
+      jcasType.jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedQuestion");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((AnnotatedQuestion_Type)jcasType).casFeatCode_sentiment);}
+    
+  /** setter for sentiment - sets  
+   * @generated */
+  public void setSentiment(int v) {
+    if (AnnotatedQuestion_Type.featOkTst && ((AnnotatedQuestion_Type)jcasType).casFeat_sentiment == null)
+      jcasType.jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedQuestion");
+    jcasType.ll_cas.ll_setIntValue(addr, ((AnnotatedQuestion_Type)jcasType).casFeatCode_sentiment, v);}    
   }
 
     

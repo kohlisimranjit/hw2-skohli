@@ -1,5 +1,6 @@
 package com.cmu.csd.annotator;
 
+import java.io.StringReader;
 import java.util.Iterator;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -15,6 +16,10 @@ import edu.cmu.deiis.subTypes.AnnotatedToken;
 import edu.cmu.deiis.subTypes.Document;
 import edu.cmu.deiis.subTypes.TokenizedDocument;
 import edu.cmu.deiis.subTypes.TokenizedSentence;
+import edu.stanford.nlp.ling.Word;
+import edu.stanford.nlp.process.Tokenizer;
+import edu.stanford.nlp.process.TokenizerFactory;
+import edu.stanford.nlp.process.PTBTokenizer.PTBTokenizerFactory;
 
 import org.apache.uima.cas.FSIndex;
 
@@ -27,7 +32,10 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 		FSIndex<Annotation> docIndex = jCas.getAnnotationIndex(Document.type);
 		// FSIndex<Annotation> docIndex =
 		// jCas.getAnnotationIndex(Document.type);
-
+		TokenizerFactory<Word> factory =
+				 PTBTokenizerFactory.newTokenizerFactory();
+				
+		
 		Iterator<Annotation> docIterator = docIndex.iterator();
 		AnnotatedToken annotatedToken = new AnnotatedToken(jCas);
 		Document document = (Document) docIterator.next();
@@ -58,7 +66,10 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			AnnotatedAnswer annotatedAnswer = (AnnotatedAnswer) answerArray
 					.get(i);
 			String answerText = annotatedAnswer.getText();
-			String answerTokenText[] = answerText.split(" ");
+			Tokenizer<Word> tokenizer =
+					 factory.getTokenizer(answerText);
+					
+			String answerTokenText[] = tokenizer.tokenize();
 			tokenizedSentence = new TokenizedSentence(jCas);
 			FSArray fsAnswertokenSentenceArray = new FSArray(jCas, answerTokenText.length);
 		

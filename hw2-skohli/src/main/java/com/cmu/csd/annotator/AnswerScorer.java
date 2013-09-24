@@ -60,7 +60,7 @@ public class AnswerScorer extends JCasAnnotator_ImplBase {
 		
 		
 		outer=nGramMatrix.getMatrix();
-		
+		double meanScore=0;
 		for (int i = 0; i < tokenizedDocument.getTokenizedAnswers().size(); i++) {
 			TokenizedSentence tokenizedAnswerInstance = tokenizedDocument
 					.getTokenizedAnswers(i);
@@ -86,11 +86,12 @@ public class AnswerScorer extends JCasAnnotator_ImplBase {
 			
 			//outer.set(i, inner);
 			sentenceConfidence = nGramConfidence / equalizer;
-
+			meanScore+=sentenceConfidence;
 			annotatedAnswer.setConfidence(sentenceConfidence);//Score(sentenceConfidence);
 			//System.out.println(sentenceConfidence);
 		}
 		
+		meanScore/=tokenizedDocument.getTokenizedAnswers().size();
 
 	}
 

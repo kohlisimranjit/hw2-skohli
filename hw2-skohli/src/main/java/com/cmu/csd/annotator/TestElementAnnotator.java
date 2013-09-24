@@ -26,7 +26,9 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 
 		FSArray answers = new FSArray(jCas, lines.length - 1);
 		AnnotatedQuestion aq = new AnnotatedQuestion(jCas);
+		
 		aq.setText(question.substring(question.indexOf('Q')).trim());
+		aq.setSentiment(getSentiment(aq.getText()));
 		document.setQuestion(aq);
 
 		document.addToIndexes();
@@ -59,7 +61,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 			annotatedAnswer.setBegin(sentenceStart);
 			annotatedAnswer.setEnd(lines[i + 1].length() - 1);
 			AnswerScore answerScore = new AnswerScore(jCas);
-
+			annotatedAnswer.setSentiment(getSentiment(annotatedAnswer.getText()));
 			Answer answerType = new Answer(jCas);
 			if (isCorrect != null)
 				answerType.setIsCorrect(isCorrect);
@@ -71,5 +73,32 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 		document.setAnswers(answers);
 		document.addToIndexes();
 
+	}
+	
+	
+	static int getSentiment(String sentence)
+	{
+		
+		int sent=1;
+		int ptr=0;
+		
+		//sentence=
+		
+		
+		if((ptr=sentence.substring(ptr,sentence.length()).indexOf(" not"))>-1)
+			{sent*=-1;
+			
+			}
+		ptr=0;
+		if((ptr=sentence.substring(ptr,sentence.length()).indexOf("n't"))>-1)
+		{sent*=-1;
+		
+		}
+			
+			
+		return sent;
+		
+		
+		
 	}
 }

@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.deiis.types.Question_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 18:53:21 EDT 2013
+ * Updated by JCasGen Mon Sep 23 20:20:08 EDT 2013
  * @generated */
 public class AnnotatedQuestion_Type extends Question_Type {
   /** @generated */
@@ -61,6 +61,24 @@ public class AnnotatedQuestion_Type extends Question_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_sentiment;
+  /** @generated */
+  final int     casFeatCode_sentiment;
+  /** @generated */ 
+  public int getSentiment(int addr) {
+        if (featOkTst && casFeat_sentiment == null)
+      jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedQuestion");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_sentiment);
+  }
+  /** @generated */    
+  public void setSentiment(int addr, int v) {
+        if (featOkTst && casFeat_sentiment == null)
+      jcas.throwFeatMissing("sentiment", "edu.cmu.deiis.subTypes.AnnotatedQuestion");
+    ll_cas.ll_setIntValue(addr, casFeatCode_sentiment, v);}
+    
+  
 
 
 
@@ -73,6 +91,10 @@ public class AnnotatedQuestion_Type extends Question_Type {
  
     casFeat_text = jcas.getRequiredFeatureDE(casType, "text", "uima.cas.String", featOkTst);
     casFeatCode_text  = (null == casFeat_text) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_text).getCode();
+
+ 
+    casFeat_sentiment = jcas.getRequiredFeatureDE(casType, "sentiment", "uima.cas.Integer", featOkTst);
+    casFeatCode_sentiment  = (null == casFeat_sentiment) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentiment).getCode();
 
   }
 }
