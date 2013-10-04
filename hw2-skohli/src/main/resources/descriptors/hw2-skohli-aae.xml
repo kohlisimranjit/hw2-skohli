@@ -6,19 +6,19 @@
   
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="AnswerScorer">
-      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/AnswerScorer.xml"/>
+      <import location="../descriptors/AnswerScorer.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="NGramAnnotator">
-      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/NGramAnnotator.xml"/>
+      <import location="../descriptors/NGramAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TestElementAnnotator">
-      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TestElementAnnotator.xml"/>
+      <import location="../descriptors/TestElementAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TokenAnnotator">
-      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/TokenAnnotator.xml"/>
+      <import location="../descriptors/TokenAnnotator.xml"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="Evaluator">
-      <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/Evaluator.xml"/>
+      <import location="../descriptors/Evaluator.xml"/>
     </delegateAnalysisEngine>
     </delegateAnalysisEngineSpecifiers>
   <!--

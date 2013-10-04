@@ -19,7 +19,7 @@ It will also assign assign  sentiment to each sentence</description>
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import location="/home/richie/git/hw2-skohli/hw2-skohli/src/main/resources/descriptors/deiis_types.xml"/>
+        <import location="../descriptors/deiis_types.xml"/>
       </imports>
       <types>
         <typeDescription>
