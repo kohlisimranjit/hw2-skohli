@@ -28,7 +28,10 @@ import edu.cmu.deiis.subTypes.TokenizedDocument;
 import edu.cmu.deiis.subTypes.TokenizedSentence;
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase {
-
+	/**
+	   * Extracts and annotates tokens for each token span
+	   * @param jcas JCas object that provides access to the CAS.
+	   */
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		// TODO Auto-generated method stub

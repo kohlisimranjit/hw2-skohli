@@ -20,7 +20,10 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.utils.AnswerComparator;
 
 public class Evaluator extends JCasAnnotator_ImplBase {
-
+	/**
+	   * This function o/p's the sorted answers based upon their confidence in descending order 
+	   * @param jcas JCas object that provides access to the CAS.
+	   */
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		// TODO Auto-generated method stub

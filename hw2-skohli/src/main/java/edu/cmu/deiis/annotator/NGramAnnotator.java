@@ -24,7 +24,10 @@ import edu.cmu.deiis.subTypes.TokenizedSentence;
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase {
 	static int intC = 0;
-
+	/**
+	   * Genrates Ngrams for each Answer
+	   * @param jcas JCas object that provides access to the CAS.
+	   */
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		NGramMatrix nGramMatrix=new NGramMatrix(jCas);

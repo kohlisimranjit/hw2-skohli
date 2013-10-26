@@ -15,7 +15,10 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
 
 public class TestElementAnnotator extends JCasAnnotator_ImplBase {
-
+	/**
+	   * Given a document, each token span it is annotated as a question or answer 
+	   * @param jcas JCas object that provides access to the CAS.
+	   */
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		// TODO Auto-generated method stub
