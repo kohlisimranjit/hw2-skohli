@@ -1,6 +1,7 @@
 package edu.cmu.deiis.annotator;
-/**This annotator class generate NGram for each answer.
-These NGrams will be filled in the NGramMatrix
+/**
+ * This annotator class generate NGram for each answer.
+*These NGrams will be filled in the NGramMatrix
 */
 import java.util.Iterator;
 

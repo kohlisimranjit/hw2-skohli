@@ -1,5 +1,6 @@
 package edu.cmu.deiis.annotator;
-/**This annotator class splits a given document into question and answer
+/**
+ * This annotator class splits a given document into question and answer
 * It will also assign assign  sentiment to each sentence
 */
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
